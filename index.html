@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificación Global: Mente y Mercado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-space': '#020408',
+              'card-bg': '#0a0c14',
+              'acid-green': '#ccff00',
+              'electric-indigo': '#6366f1',
+              'slate-gray': '#94a3b8',
+              'off-white': '#e2e8f0'
+            },
+            fontFamily: {
+              syne: ['Syne', 'sans-serif'],
+              space: ['Space Grotesk', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --color-bg: #020408;
+        --color-text: #e2e8f0;
+        --color-accent: #ccff00;
+        --color-secondary: #6366f1;
+      }
+      body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: 'Space Grotesk', sans-serif;
+        overflow-x: hidden;
+        cursor: none;
+      }
+      h1, h2, h3, h4, .display-font {
+        font-family: 'Syne', sans-serif;
+      }
+      
+      /* Noise Grain */
+      .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9998;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent);
+      }
+      
+      .text-outline {
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+        color: transparent;
+        transition: all 0.3s ease;
+      }
+      .text-outline:hover {
+         -webkit-text-stroke: 2px var(--color-accent);
+         color: rgba(204, 255, 0, 0.1);
+      }
+      
+      .glass-card {
+        background: rgba(10, 12, 20, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+      }
+
+      ::selection {
+        background-color: var(--color-accent);
+        color: black;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "three": "https://esm.sh/three@0.173.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@9.0.0-rc.1?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.121.4?external=react,react-dom,three,@react-three/fiber"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
